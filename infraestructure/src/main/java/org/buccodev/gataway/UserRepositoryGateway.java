@@ -4,6 +4,8 @@ import org.buccodev.entity.User;
 import org.buccodev.gateway.UserGataway;
 import org.buccodev.persistence.UserRepositoty;
 
+import java.util.List;
+
 public class UserRepositoryGateway implements UserGataway {
 
     private final UserMapper userMapper;
@@ -20,5 +22,25 @@ public class UserRepositoryGateway implements UserGataway {
         var userEntity = userMapper.toUseEntity(user);
         var userSave = userRepositoty.save(userEntity);
         return userMapper.toUser(userSave);
+    }
+
+    @Override
+    public User findUserById(Long id) {
+        return null;
+    }
+
+    @Override
+    public void updateUser(Long id, User user) {
+
+    }
+
+    @Override
+    public void deleteUserById(Long id) {
+
+    }
+
+    @Override
+    public List<User> getAllUser() {
+        return List.of();
     }
 }
