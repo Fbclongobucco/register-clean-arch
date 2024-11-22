@@ -19,7 +19,7 @@ public class UserInterector {
     }
 
     public User findUserById(Long id){
-        return this.findUserById(id);
+        return this.userGataway.findUserById(id);
     }
 
     public void updateUser(Long id, User user){

@@ -17,6 +17,8 @@ public class UserEntity {
     private String  password;
     private LocalDate birthday;
 
+    public UserEntity(){}
+
     public UserEntity(Long id, String name, String email, String cpf, String password, LocalDate birthday) {
         this.id = id;
         this.name = name;
